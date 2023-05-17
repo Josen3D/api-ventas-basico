@@ -7,6 +7,8 @@ import cors from "cors";
 
 // import DB connection
 import { dbConnect } from "./database/mysql.js";
+// import clients routes
+import clientRoutes from "./routes/clients.routes.js";
 
 // create express app
 const app = express();
@@ -16,9 +18,7 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
 
-app.use("/api", (req, res) => {
-  res.send("Hello world");
-});
+app.use("/api", clientRoutes);
 
 // put server to listen
 app.listen(PORT, () => console.log("Server running on port: " + PORT));

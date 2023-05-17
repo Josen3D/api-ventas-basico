@@ -1,5 +1,5 @@
 // import sequelize connection
-import { sequelize } from "../database/mysql";
+import { sequelize } from "../database/mysql.js";
 // import DataTypes
 import { DataTypes } from "sequelize";
 
