@@ -9,6 +9,8 @@ import cors from "cors";
 import { dbConnect } from "./database/mysql.js";
 // import clients routes
 import clientRoutes from "./routes/clients.routes.js";
+// import orders routes
+import orderRoutes from "./routes/orders.routes.js";
 
 // create express app
 const app = express();
@@ -19,6 +21,7 @@ app.use(express.json());
 const PORT = process.env.PORT || 3000;
 
 app.use("/api", clientRoutes);
+app.use("/api", orderRoutes);
 
 // put server to listen
 app.listen(PORT, () => console.log("Server running on port: " + PORT));
