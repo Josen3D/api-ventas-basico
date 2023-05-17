@@ -5,6 +5,9 @@ import express from "express";
 // import cors
 import cors from "cors";
 
+// import DB connection
+import { dbConnect } from "./database/mysql.js";
+
 // create express app
 const app = express();
 
@@ -19,3 +22,5 @@ app.use("/api", (req, res) => {
 
 // put server to listen
 app.listen(PORT, () => console.log("Server running on port: " + PORT));
+// connect to DB
+dbConnect();
