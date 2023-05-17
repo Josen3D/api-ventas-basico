@@ -1,7 +1,5 @@
 //import clients model
 import ClientsModel from "../models/clients.model.js";
-// import http error handler
-import { handleHttpError } from "../utils/httpError.handler.js";
 
 /**
  * Obtiene listado de registros en la DB
