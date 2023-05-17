@@ -21,7 +21,7 @@ CREATE TABLE orders(
     quantity DECIMAL(7,2),
     id_client TINYINT,
     createdAt DATE,
-    updatedAt DATE
+    updatedAt DATE,
     PRIMARY KEY(id)
 );
 
@@ -30,8 +30,8 @@ DESCRIBE orders;
 INSERT INTO clients (RFC, name, fathers_lastname, mothers_lastname, age, createdAt, updatedAt)
     VALUES("LOMF870502", "Fernando", "López", "Millán", 28, now(), now());
 
-INSERT INTO orders (date, quantity, id_client)
-    VALUES("2015/05/05", 25.45, 1)
+INSERT INTO orders (quantity, id_client, createdAt, updatedAt)
+    VALUES(25.45, 1, now(), now());
 
 SELECT * FROM clients;
 
