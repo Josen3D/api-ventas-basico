@@ -9,7 +9,7 @@ import OrderModel from "../models/orders.model.js";
  */
 export const getAllOrders = async () => {
   try {
-    const responseGet = await OrderModel.findAll({});
+    const responseGet = await OrderModel.findAllData();
     return responseGet;
   } catch (error) {
     console.log("Error Service: " + error);
@@ -23,7 +23,7 @@ export const getAllOrders = async () => {
  */
 export const getOneOrder = async (id) => {
   try {
-    const responseGet = await OrderModel.findOne({ where: { id } });
+    const responseGet = await OrderModel.findOneData(id);
     return responseGet;
   } catch (error) {
     console.log("Error service " + error);
